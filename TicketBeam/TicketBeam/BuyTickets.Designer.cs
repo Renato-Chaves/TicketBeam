@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             MyTickets_btn = new Button();
-            label12 = new Label();
+            MovieSession = new Label();
             Horarios_Label = new Label();
-            label3 = new Label();
+            MovieDate = new Label();
             label1 = new Label();
-            textBox1 = new TextBox();
+            MovieTitle = new TextBox();
             BackArrow_btn = new Button();
             label2 = new Label();
-            panel1 = new Panel();
+            TicketPanel = new Panel();
             SuspendLayout();
             // 
             // MyTickets_btn
@@ -53,18 +53,19 @@
             MyTickets_btn.TabIndex = 0;
             MyTickets_btn.Text = "Comprar Ingressos";
             MyTickets_btn.UseVisualStyleBackColor = false;
+            MyTickets_btn.Click += PurchaseTickets;
             // 
-            // label12
+            // MovieSession
             // 
-            label12.AutoSize = true;
-            label12.BackColor = Color.Transparent;
-            label12.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            label12.ForeColor = Color.FromArgb(30, 106, 167);
-            label12.Location = new Point(790, 419);
-            label12.Name = "label12";
-            label12.Size = new Size(94, 41);
-            label12.TabIndex = 61;
-            label12.Text = "11:30";
+            MovieSession.AutoSize = true;
+            MovieSession.BackColor = Color.Transparent;
+            MovieSession.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            MovieSession.ForeColor = Color.FromArgb(30, 106, 167);
+            MovieSession.Location = new Point(790, 419);
+            MovieSession.Name = "MovieSession";
+            MovieSession.Size = new Size(94, 41);
+            MovieSession.TabIndex = 61;
+            MovieSession.Text = "11:30";
             // 
             // Horarios_Label
             // 
@@ -79,17 +80,17 @@
             Horarios_Label.Text = "Horario:";
             Horarios_Label.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // MovieDate
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            label3.ForeColor = Color.FromArgb(30, 106, 167);
-            label3.Location = new Point(800, 283);
-            label3.Name = "label3";
-            label3.Size = new Size(71, 41);
-            label3.TabIndex = 53;
-            label3.Text = "Seg";
+            MovieDate.AutoSize = true;
+            MovieDate.BackColor = Color.Transparent;
+            MovieDate.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            MovieDate.ForeColor = Color.FromArgb(30, 106, 167);
+            MovieDate.Location = new Point(800, 283);
+            MovieDate.Name = "MovieDate";
+            MovieDate.Size = new Size(71, 41);
+            MovieDate.TabIndex = 53;
+            MovieDate.Text = "Seg";
             // 
             // label1
             // 
@@ -104,20 +105,20 @@
             label1.Text = "Sessão:";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // MovieTitle
             // 
-            textBox1.BackColor = Color.FromArgb(11, 11, 11);
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI Black", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.ForeColor = Color.FromArgb(209, 209, 209);
-            textBox1.Location = new Point(114, 131);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(797, 100);
-            textBox1.TabIndex = 51;
-            textBox1.Text = "Five Nights at Freddy’s";
-            textBox1.TextAlign = HorizontalAlignment.Center;
+            MovieTitle.BackColor = Color.FromArgb(11, 11, 11);
+            MovieTitle.BorderStyle = BorderStyle.None;
+            MovieTitle.Font = new Font("Segoe UI Black", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            MovieTitle.ForeColor = Color.FromArgb(209, 209, 209);
+            MovieTitle.Location = new Point(114, 131);
+            MovieTitle.Multiline = true;
+            MovieTitle.Name = "MovieTitle";
+            MovieTitle.ReadOnly = true;
+            MovieTitle.Size = new Size(797, 55);
+            MovieTitle.TabIndex = 51;
+            MovieTitle.Text = "Five Nights at Freddy’s";
+            MovieTitle.TextAlign = HorizontalAlignment.Center;
             // 
             // BackArrow_btn
             // 
@@ -145,12 +146,13 @@
             label2.TabIndex = 48;
             label2.Text = "O melhores tickets só encontra aqui";
             // 
-            // panel1
+            // TicketPanel
             // 
-            panel1.Location = new Point(63, 205);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(608, 341);
-            panel1.TabIndex = 67;
+            TicketPanel.BackColor = Color.FromArgb(11, 11, 11);
+            TicketPanel.Location = new Point(63, 192);
+            TicketPanel.Name = "TicketPanel";
+            TicketPanel.Size = new Size(634, 354);
+            TicketPanel.TabIndex = 67;
             // 
             // BuyTickets
             // 
@@ -158,30 +160,31 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.MoviePageBG;
             ClientSize = new Size(1025, 600);
-            Controls.Add(panel1);
+            Controls.Add(TicketPanel);
             Controls.Add(MyTickets_btn);
-            Controls.Add(label12);
+            Controls.Add(MovieSession);
             Controls.Add(Horarios_Label);
-            Controls.Add(label3);
+            Controls.Add(MovieDate);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(MovieTitle);
             Controls.Add(BackArrow_btn);
             Controls.Add(label2);
             Name = "BuyTickets";
             Text = "BuyTickets";
+            Load += BuyTickets_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
         private Button MyTickets_btn;
-        private Label label12;
+        private Label MovieSession;
         private Label Horarios_Label;
-        private Label label3;
+        private Label MovieDate;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox MovieTitle;
         private Button BackArrow_btn;
         private Label label2;
-        private Panel panel1;
+        private Panel TicketPanel;
     }
 }

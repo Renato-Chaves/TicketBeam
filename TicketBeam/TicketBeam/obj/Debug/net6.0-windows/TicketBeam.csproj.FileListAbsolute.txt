@@ -48,3 +48,4 @@ C:\Users\rchav\OneDrive\Documentos\GitHub\TicketBeam\TicketBeam\TicketBeam\obj\D
 C:\Users\rchav\OneDrive\Documentos\GitHub\TicketBeam\TicketBeam\TicketBeam\obj\Debug\net6.0-windows\TicketBeam.pdb
 C:\Users\rchav\OneDrive\Documentos\GitHub\TicketBeam\TicketBeam\TicketBeam\obj\Debug\net6.0-windows\TicketBeam.genruntimeconfig.cache
 C:\Users\rchav\OneDrive\Documentos\GitHub\TicketBeam\TicketBeam\TicketBeam\obj\Debug\net6.0-windows\ref\TicketBeam.dll
+C:\Users\rchav\OneDrive\Documentos\GitHub\TicketBeam\TicketBeam\TicketBeam\obj\Debug\net6.0-windows\TicketBeam.Form1.resources

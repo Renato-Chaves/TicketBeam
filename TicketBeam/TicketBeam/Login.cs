@@ -1,4 +1,6 @@
-﻿using Microsoft.Win32;
+﻿using Microsoft.VisualBasic.Logging;
+using Microsoft.Win32;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,44 +17,80 @@ namespace TicketBeam
     public partial class Login : Form
     {
 
-        Register register;
         MainPage mainPage;
-        private string cd_user;
+        MyDBConnection db;
+        private static Login instance;
+        private int cd_user;
 
         public Login()
         {
+            db = MyDBConnection.GetInstance();
             this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
         }
 
-        private void CreateAccountLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        public static Login GetInstance()
         {
-            if (register == null) register = new Register(this);
-            this.Hide();
-            register.StartPosition = FormStartPosition.CenterScreen;
-            register.Show();
-            ClearInputs();
+            if (instance == null) instance = new Login();
+            return instance;
         }
 
-        public void FillRegister(Register _register)
+        public void SwitchToPage()
         {
-            this.register = _register;
+            this.Show();
         }
+
+        private void CreateAccountLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Register.GetInstance().SwitchToPage();
+        }
+
 
         private void Login_btn_Click(object sender, EventArgs e)
         {
-            if (mainPage == null) mainPage = new MainPage(this, cd_user);
-            else mainPage.AdmCheck(this, cd_user);
-            this.Hide();
-            mainPage.StartPosition = FormStartPosition.CenterScreen;
-            ClearInputs();
-            mainPage.Show();
+            if(StringCheck(UsernameInput.Text) && StringCheck(PasswordInput.Text))
+            {
+                try
+                {
+                    MySqlCommand cmd = new MySqlCommand("select cd_user from users where nm_user=@UserName and password=@UserPass");
+                    cmd.Parameters.AddWithValue("@UserName", UsernameInput.Text);
+                    cmd.Parameters.AddWithValue("@UserPass", PasswordInput.Text);
+                    DataSet dataSet = db.QuerryToDataSet(cmd);
+
+                    if (dataSet.Tables[0].Rows.Count > 0)
+                    {
+                        cd_user = (int)dataSet.Tables[0].Rows[0]["cd_user"];
+                        db.setUser(cd_user);
+                        //Change to MainPage
+                        this.Hide();
+                        MainPage.GetInstance().SwitchToPage();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Login ou senha incorreto(s).");
+                    }
+                }catch(Exception ex)
+                {
+                    MessageBox.Show("Banco de dados fora de operação.\nTente novamente mais tarde.\n"+ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Preencha todos os campos.");
+            }
+            
         }
 
         private void ClearInputs()
         {
             UsernameInput.Text = string.Empty;
             PasswordInput.Text = string.Empty;
+        }
+
+        private bool StringCheck(string text)
+        {
+            return !string.IsNullOrWhiteSpace(text);
         }
     }
 }

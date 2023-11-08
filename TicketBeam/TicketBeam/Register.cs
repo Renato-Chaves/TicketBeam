@@ -14,24 +14,28 @@ namespace TicketBeam
     public partial class Register : Form
     {
         Login login;
-        public Register(Login _login)
+        private static Register instance;
+        public Register()
         {
-            this.login = _login;
+            this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
+        }
+
+        public void SwitchToPage()
+        {
+            this.Show();
+        }
+
+        public static Register GetInstance()
+        {
+            if (instance == null) instance = new Register();
+            return instance;
         }
 
         private void Login_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            SwitchPages();
-        }
-
-        private void SwitchPages()
-        {
-            login.FillRegister(this);
-            login.Show();
             this.Hide();
-
-            ClearInputs();
+            Login.GetInstance().SwitchToPage();
         }
 
         private void ClearInputs()

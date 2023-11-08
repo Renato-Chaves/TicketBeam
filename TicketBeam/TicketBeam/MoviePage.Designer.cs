@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             label2 = new Label();
-            pictureBox1 = new PictureBox();
+            MovieCover = new PictureBox();
             BackArrow_btn = new Button();
-            textBox1 = new TextBox();
+            MovieTitle = new TextBox();
             label1 = new Label();
             Horarios_Label = new Label();
             BuyTickets_btn = new Button();
-            textBox2 = new TextBox();
-            linkLabel1 = new LinkLabel();
-            linkLabel2 = new LinkLabel();
-            linkLabel3 = new LinkLabel();
-            linkLabel4 = new LinkLabel();
-            linkLabel5 = new LinkLabel();
-            linkLabel6 = new LinkLabel();
-            linkLabel7 = new LinkLabel();
-            linkLabel8 = new LinkLabel();
-            linkLabel9 = new LinkLabel();
-            linkLabel10 = new LinkLabel();
-            linkLabel11 = new LinkLabel();
-            linkLabel12 = new LinkLabel();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            MovieDuration = new TextBox();
+            MovieDate1 = new LinkLabel();
+            MovieDate2 = new LinkLabel();
+            MovieDate3 = new LinkLabel();
+            MovieDate4 = new LinkLabel();
+            MovieDate5 = new LinkLabel();
+            MovieDate6 = new LinkLabel();
+            MovieDate7 = new LinkLabel();
+            MovieTime1 = new LinkLabel();
+            MovieTime2 = new LinkLabel();
+            MovieTime3 = new LinkLabel();
+            MovieTime4 = new LinkLabel();
+            MovieTime5 = new LinkLabel();
+            ((System.ComponentModel.ISupportInitialize)MovieCover).BeginInit();
             SuspendLayout();
             // 
             // label2
@@ -63,17 +63,17 @@
             label2.TabIndex = 4;
             label2.Text = "O melhores tickets só encontra aqui";
             // 
-            // pictureBox1
+            // MovieCover
             // 
-            pictureBox1.BackColor = SystemColors.ActiveCaptionText;
-            pictureBox1.ImageLocation = "https://www.saltypopcorn.co.uk/film-images/five-nights-at-freddys.jpg";
-            pictureBox1.InitialImage = Properties.Resources.Logo;
-            pictureBox1.Location = new Point(52, 213);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(211, 306);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 10;
-            pictureBox1.TabStop = false;
+            MovieCover.BackColor = SystemColors.ActiveCaptionText;
+            MovieCover.ImageLocation = "https://www.saltypopcorn.co.uk/film-images/five-nights-at-freddys.jpg";
+            MovieCover.InitialImage = Properties.Resources.Logo;
+            MovieCover.Location = new Point(52, 213);
+            MovieCover.Name = "MovieCover";
+            MovieCover.Size = new Size(211, 306);
+            MovieCover.SizeMode = PictureBoxSizeMode.StretchImage;
+            MovieCover.TabIndex = 10;
+            MovieCover.TabStop = false;
             // 
             // BackArrow_btn
             // 
@@ -89,20 +89,20 @@
             BackArrow_btn.UseVisualStyleBackColor = false;
             BackArrow_btn.Click += BackArrow_btn_Click;
             // 
-            // textBox1
+            // MovieTitle
             // 
-            textBox1.BackColor = Color.FromArgb(11, 11, 11);
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI Black", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.ForeColor = Color.FromArgb(209, 209, 209);
-            textBox1.Location = new Point(269, 131);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(684, 100);
-            textBox1.TabIndex = 31;
-            textBox1.Text = "Five Nights at Freddy’s";
-            textBox1.TextAlign = HorizontalAlignment.Center;
+            MovieTitle.BackColor = Color.FromArgb(11, 11, 11);
+            MovieTitle.BorderStyle = BorderStyle.None;
+            MovieTitle.Font = new Font("Segoe UI Black", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            MovieTitle.ForeColor = Color.FromArgb(209, 209, 209);
+            MovieTitle.Location = new Point(269, 131);
+            MovieTitle.Multiline = true;
+            MovieTitle.Name = "MovieTitle";
+            MovieTitle.ReadOnly = true;
+            MovieTitle.Size = new Size(684, 45);
+            MovieTitle.TabIndex = 31;
+            MovieTitle.Text = "Five Nights at Freddy’s";
+            MovieTitle.TextAlign = HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -146,238 +146,250 @@
             BuyTickets_btn.UseVisualStyleBackColor = false;
             BuyTickets_btn.Click += BuyTickets_btn_Click;
             // 
-            // textBox2
+            // MovieDuration
             // 
-            textBox2.BackColor = Color.FromArgb(11, 11, 11);
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Segoe UI Black", 8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox2.ForeColor = Color.FromArgb(209, 209, 209);
-            textBox2.Location = new Point(52, 524);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.Size = new Size(210, 22);
-            textBox2.TabIndex = 47;
-            textBox2.Text = "Duração: 2h30";
-            textBox2.TextAlign = HorizontalAlignment.Center;
+            MovieDuration.BackColor = Color.FromArgb(11, 11, 11);
+            MovieDuration.BorderStyle = BorderStyle.None;
+            MovieDuration.Font = new Font("Segoe UI Black", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            MovieDuration.ForeColor = Color.FromArgb(209, 209, 209);
+            MovieDuration.Location = new Point(52, 524);
+            MovieDuration.Multiline = true;
+            MovieDuration.Name = "MovieDuration";
+            MovieDuration.ReadOnly = true;
+            MovieDuration.Size = new Size(210, 22);
+            MovieDuration.TabIndex = 47;
+            MovieDuration.Text = "Duração: 2h30";
+            MovieDuration.TextAlign = HorizontalAlignment.Center;
             // 
-            // linkLabel1
+            // MovieDate1
             // 
-            linkLabel1.ActiveLinkColor = Color.FromArgb(30, 106, 167);
-            linkLabel1.AutoSize = true;
-            linkLabel1.BackColor = Color.Transparent;
-            linkLabel1.DisabledLinkColor = Color.FromArgb(30, 106, 167);
-            linkLabel1.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            linkLabel1.ForeColor = Color.FromArgb(209, 209, 209);
-            linkLabel1.LinkBehavior = LinkBehavior.AlwaysUnderline;
-            linkLabel1.LinkColor = Color.FromArgb(209, 209, 209);
-            linkLabel1.LinkVisited = true;
-            linkLabel1.Location = new Point(354, 276);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(71, 41);
-            linkLabel1.TabIndex = 48;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Seg";
-            linkLabel1.VisitedLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate1.ActiveLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate1.AutoSize = true;
+            MovieDate1.BackColor = Color.Transparent;
+            MovieDate1.DisabledLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate1.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            MovieDate1.ForeColor = Color.FromArgb(209, 209, 209);
+            MovieDate1.LinkBehavior = LinkBehavior.AlwaysUnderline;
+            MovieDate1.LinkColor = Color.FromArgb(209, 209, 209);
+            MovieDate1.LinkVisited = true;
+            MovieDate1.Location = new Point(354, 276);
+            MovieDate1.Name = "MovieDate1";
+            MovieDate1.Size = new Size(71, 41);
+            MovieDate1.TabIndex = 48;
+            MovieDate1.TabStop = true;
+            MovieDate1.Text = "Seg";
+            MovieDate1.VisitedLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate1.Click += Date_Click;
             // 
-            // linkLabel2
+            // MovieDate2
             // 
-            linkLabel2.ActiveLinkColor = Color.FromArgb(30, 106, 167);
-            linkLabel2.AutoSize = true;
-            linkLabel2.BackColor = Color.Transparent;
-            linkLabel2.DisabledLinkColor = Color.FromArgb(30, 106, 167);
-            linkLabel2.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            linkLabel2.ForeColor = Color.FromArgb(209, 209, 209);
-            linkLabel2.LinkBehavior = LinkBehavior.NeverUnderline;
-            linkLabel2.LinkColor = Color.FromArgb(209, 209, 209);
-            linkLabel2.Location = new Point(431, 276);
-            linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(67, 41);
-            linkLabel2.TabIndex = 49;
-            linkLabel2.TabStop = true;
-            linkLabel2.Text = "Ter";
-            linkLabel2.VisitedLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate2.ActiveLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate2.AutoSize = true;
+            MovieDate2.BackColor = Color.Transparent;
+            MovieDate2.DisabledLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate2.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            MovieDate2.ForeColor = Color.FromArgb(209, 209, 209);
+            MovieDate2.LinkBehavior = LinkBehavior.NeverUnderline;
+            MovieDate2.LinkColor = Color.FromArgb(209, 209, 209);
+            MovieDate2.Location = new Point(431, 276);
+            MovieDate2.Name = "MovieDate2";
+            MovieDate2.Size = new Size(67, 41);
+            MovieDate2.TabIndex = 49;
+            MovieDate2.TabStop = true;
+            MovieDate2.Text = "Ter";
+            MovieDate2.VisitedLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate2.Click += Date_Click;
             // 
-            // linkLabel3
+            // MovieDate3
             // 
-            linkLabel3.ActiveLinkColor = Color.FromArgb(30, 106, 167);
-            linkLabel3.AutoSize = true;
-            linkLabel3.BackColor = Color.Transparent;
-            linkLabel3.DisabledLinkColor = Color.FromArgb(30, 106, 167);
-            linkLabel3.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            linkLabel3.ForeColor = Color.FromArgb(209, 209, 209);
-            linkLabel3.LinkBehavior = LinkBehavior.NeverUnderline;
-            linkLabel3.LinkColor = Color.FromArgb(209, 209, 209);
-            linkLabel3.Location = new Point(504, 276);
-            linkLabel3.Name = "linkLabel3";
-            linkLabel3.Size = new Size(77, 41);
-            linkLabel3.TabIndex = 50;
-            linkLabel3.TabStop = true;
-            linkLabel3.Text = "Qua";
-            linkLabel3.VisitedLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate3.ActiveLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate3.AutoSize = true;
+            MovieDate3.BackColor = Color.Transparent;
+            MovieDate3.DisabledLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate3.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            MovieDate3.ForeColor = Color.FromArgb(209, 209, 209);
+            MovieDate3.LinkBehavior = LinkBehavior.NeverUnderline;
+            MovieDate3.LinkColor = Color.FromArgb(209, 209, 209);
+            MovieDate3.Location = new Point(504, 276);
+            MovieDate3.Name = "MovieDate3";
+            MovieDate3.Size = new Size(77, 41);
+            MovieDate3.TabIndex = 50;
+            MovieDate3.TabStop = true;
+            MovieDate3.Text = "Qua";
+            MovieDate3.VisitedLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate3.Click += Date_Click;
             // 
-            // linkLabel4
+            // MovieDate4
             // 
-            linkLabel4.ActiveLinkColor = Color.FromArgb(30, 106, 167);
-            linkLabel4.AutoSize = true;
-            linkLabel4.BackColor = Color.Transparent;
-            linkLabel4.DisabledLinkColor = Color.FromArgb(30, 106, 167);
-            linkLabel4.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            linkLabel4.ForeColor = Color.FromArgb(209, 209, 209);
-            linkLabel4.LinkBehavior = LinkBehavior.NeverUnderline;
-            linkLabel4.LinkColor = Color.FromArgb(209, 209, 209);
-            linkLabel4.Location = new Point(587, 276);
-            linkLabel4.Name = "linkLabel4";
-            linkLabel4.Size = new Size(69, 41);
-            linkLabel4.TabIndex = 51;
-            linkLabel4.TabStop = true;
-            linkLabel4.Text = "Qui";
-            linkLabel4.VisitedLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate4.ActiveLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate4.AutoSize = true;
+            MovieDate4.BackColor = Color.Transparent;
+            MovieDate4.DisabledLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate4.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            MovieDate4.ForeColor = Color.FromArgb(209, 209, 209);
+            MovieDate4.LinkBehavior = LinkBehavior.NeverUnderline;
+            MovieDate4.LinkColor = Color.FromArgb(209, 209, 209);
+            MovieDate4.Location = new Point(587, 276);
+            MovieDate4.Name = "MovieDate4";
+            MovieDate4.Size = new Size(69, 41);
+            MovieDate4.TabIndex = 51;
+            MovieDate4.TabStop = true;
+            MovieDate4.Text = "Qui";
+            MovieDate4.VisitedLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate4.Click += Date_Click;
             // 
-            // linkLabel5
+            // MovieDate5
             // 
-            linkLabel5.ActiveLinkColor = Color.FromArgb(30, 106, 167);
-            linkLabel5.AutoSize = true;
-            linkLabel5.BackColor = Color.Transparent;
-            linkLabel5.DisabledLinkColor = Color.FromArgb(30, 106, 167);
-            linkLabel5.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            linkLabel5.ForeColor = Color.FromArgb(209, 209, 209);
-            linkLabel5.LinkBehavior = LinkBehavior.NeverUnderline;
-            linkLabel5.LinkColor = Color.FromArgb(209, 209, 209);
-            linkLabel5.Location = new Point(662, 276);
-            linkLabel5.Name = "linkLabel5";
-            linkLabel5.Size = new Size(71, 41);
-            linkLabel5.TabIndex = 52;
-            linkLabel5.TabStop = true;
-            linkLabel5.Text = "Sex";
-            linkLabel5.VisitedLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate5.ActiveLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate5.AutoSize = true;
+            MovieDate5.BackColor = Color.Transparent;
+            MovieDate5.DisabledLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate5.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            MovieDate5.ForeColor = Color.FromArgb(209, 209, 209);
+            MovieDate5.LinkBehavior = LinkBehavior.NeverUnderline;
+            MovieDate5.LinkColor = Color.FromArgb(209, 209, 209);
+            MovieDate5.Location = new Point(662, 276);
+            MovieDate5.Name = "MovieDate5";
+            MovieDate5.Size = new Size(71, 41);
+            MovieDate5.TabIndex = 52;
+            MovieDate5.TabStop = true;
+            MovieDate5.Text = "Sex";
+            MovieDate5.VisitedLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate5.Click += Date_Click;
             // 
-            // linkLabel6
+            // MovieDate6
             // 
-            linkLabel6.ActiveLinkColor = Color.FromArgb(30, 106, 167);
-            linkLabel6.AutoSize = true;
-            linkLabel6.BackColor = Color.Transparent;
-            linkLabel6.DisabledLinkColor = Color.FromArgb(30, 106, 167);
-            linkLabel6.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            linkLabel6.ForeColor = Color.FromArgb(209, 209, 209);
-            linkLabel6.LinkBehavior = LinkBehavior.NeverUnderline;
-            linkLabel6.LinkColor = Color.FromArgb(209, 209, 209);
-            linkLabel6.Location = new Point(739, 276);
-            linkLabel6.Name = "linkLabel6";
-            linkLabel6.Size = new Size(71, 41);
-            linkLabel6.TabIndex = 53;
-            linkLabel6.TabStop = true;
-            linkLabel6.Text = "Sab";
-            linkLabel6.VisitedLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate6.ActiveLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate6.AutoSize = true;
+            MovieDate6.BackColor = Color.Transparent;
+            MovieDate6.DisabledLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate6.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            MovieDate6.ForeColor = Color.FromArgb(209, 209, 209);
+            MovieDate6.LinkBehavior = LinkBehavior.NeverUnderline;
+            MovieDate6.LinkColor = Color.FromArgb(209, 209, 209);
+            MovieDate6.Location = new Point(739, 276);
+            MovieDate6.Name = "MovieDate6";
+            MovieDate6.Size = new Size(71, 41);
+            MovieDate6.TabIndex = 53;
+            MovieDate6.TabStop = true;
+            MovieDate6.Text = "Sab";
+            MovieDate6.VisitedLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate6.Click += Date_Click;
             // 
-            // linkLabel7
+            // MovieDate7
             // 
-            linkLabel7.ActiveLinkColor = Color.FromArgb(30, 106, 167);
-            linkLabel7.AutoSize = true;
-            linkLabel7.BackColor = Color.Transparent;
-            linkLabel7.DisabledLinkColor = Color.FromArgb(30, 106, 167);
-            linkLabel7.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            linkLabel7.ForeColor = Color.FromArgb(209, 209, 209);
-            linkLabel7.LinkBehavior = LinkBehavior.NeverUnderline;
-            linkLabel7.LinkColor = Color.FromArgb(209, 209, 209);
-            linkLabel7.Location = new Point(816, 276);
-            linkLabel7.Name = "linkLabel7";
-            linkLabel7.Size = new Size(89, 41);
-            linkLabel7.TabIndex = 54;
-            linkLabel7.TabStop = true;
-            linkLabel7.Text = "Dom";
-            linkLabel7.VisitedLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate7.ActiveLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate7.AutoSize = true;
+            MovieDate7.BackColor = Color.Transparent;
+            MovieDate7.DisabledLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate7.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            MovieDate7.ForeColor = Color.FromArgb(209, 209, 209);
+            MovieDate7.LinkBehavior = LinkBehavior.NeverUnderline;
+            MovieDate7.LinkColor = Color.FromArgb(209, 209, 209);
+            MovieDate7.Location = new Point(816, 276);
+            MovieDate7.Name = "MovieDate7";
+            MovieDate7.Size = new Size(89, 41);
+            MovieDate7.TabIndex = 54;
+            MovieDate7.TabStop = true;
+            MovieDate7.Text = "Dom";
+            MovieDate7.VisitedLinkColor = Color.FromArgb(30, 106, 167);
+            MovieDate7.Click += Date_Click;
             // 
-            // linkLabel8
+            // MovieTime1
             // 
-            linkLabel8.ActiveLinkColor = Color.FromArgb(30, 106, 167);
-            linkLabel8.AutoSize = true;
-            linkLabel8.BackColor = Color.Transparent;
-            linkLabel8.DisabledLinkColor = Color.FromArgb(30, 106, 167);
-            linkLabel8.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            linkLabel8.ForeColor = Color.FromArgb(209, 209, 209);
-            linkLabel8.LinkBehavior = LinkBehavior.NeverUnderline;
-            linkLabel8.LinkColor = Color.FromArgb(209, 209, 209);
-            linkLabel8.Location = new Point(366, 420);
-            linkLabel8.Name = "linkLabel8";
-            linkLabel8.Size = new Size(100, 41);
-            linkLabel8.TabIndex = 55;
-            linkLabel8.TabStop = true;
-            linkLabel8.Text = "08:00";
-            linkLabel8.VisitedLinkColor = Color.FromArgb(30, 106, 167);
+            MovieTime1.ActiveLinkColor = Color.FromArgb(30, 106, 167);
+            MovieTime1.AutoSize = true;
+            MovieTime1.BackColor = Color.Transparent;
+            MovieTime1.DisabledLinkColor = Color.FromArgb(30, 106, 167);
+            MovieTime1.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            MovieTime1.ForeColor = Color.FromArgb(209, 209, 209);
+            MovieTime1.LinkBehavior = LinkBehavior.NeverUnderline;
+            MovieTime1.LinkColor = Color.FromArgb(209, 209, 209);
+            MovieTime1.Location = new Point(366, 420);
+            MovieTime1.Name = "MovieTime1";
+            MovieTime1.Size = new Size(100, 41);
+            MovieTime1.TabIndex = 55;
+            MovieTime1.TabStop = true;
+            MovieTime1.Text = "08:00";
+            MovieTime1.VisitedLinkColor = Color.FromArgb(30, 106, 167);
+            MovieTime1.Click += Session_Click;
             // 
-            // linkLabel9
+            // MovieTime2
             // 
-            linkLabel9.ActiveLinkColor = Color.FromArgb(30, 106, 167);
-            linkLabel9.AutoSize = true;
-            linkLabel9.BackColor = Color.Transparent;
-            linkLabel9.DisabledLinkColor = Color.FromArgb(30, 106, 167);
-            linkLabel9.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            linkLabel9.ForeColor = Color.FromArgb(209, 209, 209);
-            linkLabel9.LinkBehavior = LinkBehavior.AlwaysUnderline;
-            linkLabel9.LinkColor = Color.FromArgb(209, 209, 209);
-            linkLabel9.LinkVisited = true;
-            linkLabel9.Location = new Point(472, 420);
-            linkLabel9.Name = "linkLabel9";
-            linkLabel9.Size = new Size(94, 41);
-            linkLabel9.TabIndex = 56;
-            linkLabel9.TabStop = true;
-            linkLabel9.Text = "11:30";
-            linkLabel9.VisitedLinkColor = Color.FromArgb(30, 106, 167);
+            MovieTime2.ActiveLinkColor = Color.FromArgb(30, 106, 167);
+            MovieTime2.AutoSize = true;
+            MovieTime2.BackColor = Color.Transparent;
+            MovieTime2.DisabledLinkColor = Color.FromArgb(30, 106, 167);
+            MovieTime2.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            MovieTime2.ForeColor = Color.FromArgb(209, 209, 209);
+            MovieTime2.LinkBehavior = LinkBehavior.AlwaysUnderline;
+            MovieTime2.LinkColor = Color.FromArgb(209, 209, 209);
+            MovieTime2.LinkVisited = true;
+            MovieTime2.Location = new Point(472, 420);
+            MovieTime2.Name = "MovieTime2";
+            MovieTime2.Size = new Size(94, 41);
+            MovieTime2.TabIndex = 56;
+            MovieTime2.TabStop = true;
+            MovieTime2.Text = "11:30";
+            MovieTime2.VisitedLinkColor = Color.FromArgb(30, 106, 167);
+            MovieTime2.Click += Session_Click;
             // 
-            // linkLabel10
+            // MovieTime3
             // 
-            linkLabel10.ActiveLinkColor = Color.FromArgb(30, 106, 167);
-            linkLabel10.AutoSize = true;
-            linkLabel10.BackColor = Color.Transparent;
-            linkLabel10.DisabledLinkColor = Color.FromArgb(30, 106, 167);
-            linkLabel10.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            linkLabel10.ForeColor = Color.FromArgb(209, 209, 209);
-            linkLabel10.LinkBehavior = LinkBehavior.NeverUnderline;
-            linkLabel10.LinkColor = Color.FromArgb(209, 209, 209);
-            linkLabel10.Location = new Point(572, 420);
-            linkLabel10.Name = "linkLabel10";
-            linkLabel10.Size = new Size(97, 41);
-            linkLabel10.TabIndex = 57;
-            linkLabel10.TabStop = true;
-            linkLabel10.Text = "19:20";
-            linkLabel10.VisitedLinkColor = Color.FromArgb(30, 106, 167);
+            MovieTime3.ActiveLinkColor = Color.FromArgb(30, 106, 167);
+            MovieTime3.AutoSize = true;
+            MovieTime3.BackColor = Color.Transparent;
+            MovieTime3.DisabledLinkColor = Color.FromArgb(30, 106, 167);
+            MovieTime3.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            MovieTime3.ForeColor = Color.FromArgb(209, 209, 209);
+            MovieTime3.LinkBehavior = LinkBehavior.NeverUnderline;
+            MovieTime3.LinkColor = Color.FromArgb(209, 209, 209);
+            MovieTime3.Location = new Point(572, 420);
+            MovieTime3.Name = "MovieTime3";
+            MovieTime3.Size = new Size(97, 41);
+            MovieTime3.TabIndex = 57;
+            MovieTime3.TabStop = true;
+            MovieTime3.Text = "19:20";
+            MovieTime3.VisitedLinkColor = Color.FromArgb(30, 106, 167);
+            MovieTime3.Click += Session_Click;
             // 
-            // linkLabel11
+            // MovieTime4
             // 
-            linkLabel11.ActiveLinkColor = Color.FromArgb(30, 106, 167);
-            linkLabel11.AutoSize = true;
-            linkLabel11.BackColor = Color.Transparent;
-            linkLabel11.DisabledLinkColor = Color.FromArgb(30, 106, 167);
-            linkLabel11.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            linkLabel11.ForeColor = Color.FromArgb(209, 209, 209);
-            linkLabel11.LinkBehavior = LinkBehavior.NeverUnderline;
-            linkLabel11.LinkColor = Color.FromArgb(209, 209, 209);
-            linkLabel11.Location = new Point(675, 420);
-            linkLabel11.Name = "linkLabel11";
-            linkLabel11.Size = new Size(100, 41);
-            linkLabel11.TabIndex = 58;
-            linkLabel11.TabStop = true;
-            linkLabel11.Text = "22:30";
-            linkLabel11.VisitedLinkColor = Color.FromArgb(30, 106, 167);
+            MovieTime4.ActiveLinkColor = Color.FromArgb(30, 106, 167);
+            MovieTime4.AutoSize = true;
+            MovieTime4.BackColor = Color.Transparent;
+            MovieTime4.DisabledLinkColor = Color.FromArgb(30, 106, 167);
+            MovieTime4.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            MovieTime4.ForeColor = Color.FromArgb(209, 209, 209);
+            MovieTime4.LinkBehavior = LinkBehavior.NeverUnderline;
+            MovieTime4.LinkColor = Color.FromArgb(209, 209, 209);
+            MovieTime4.Location = new Point(675, 420);
+            MovieTime4.Name = "MovieTime4";
+            MovieTime4.Size = new Size(100, 41);
+            MovieTime4.TabIndex = 58;
+            MovieTime4.TabStop = true;
+            MovieTime4.Text = "22:30";
+            MovieTime4.VisitedLinkColor = Color.FromArgb(30, 106, 167);
+            MovieTime4.Click += Session_Click;
             // 
-            // linkLabel12
+            // MovieTime5
             // 
-            linkLabel12.ActiveLinkColor = Color.FromArgb(30, 106, 167);
-            linkLabel12.AutoSize = true;
-            linkLabel12.BackColor = Color.Transparent;
-            linkLabel12.DisabledLinkColor = Color.FromArgb(30, 106, 167);
-            linkLabel12.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            linkLabel12.ForeColor = Color.FromArgb(209, 209, 209);
-            linkLabel12.LinkBehavior = LinkBehavior.NeverUnderline;
-            linkLabel12.LinkColor = Color.FromArgb(209, 209, 209);
-            linkLabel12.Location = new Point(781, 420);
-            linkLabel12.Name = "linkLabel12";
-            linkLabel12.Size = new Size(100, 41);
-            linkLabel12.TabIndex = 59;
-            linkLabel12.TabStop = true;
-            linkLabel12.Text = "23:99";
-            linkLabel12.VisitedLinkColor = Color.FromArgb(30, 106, 167);
+            MovieTime5.ActiveLinkColor = Color.FromArgb(30, 106, 167);
+            MovieTime5.AutoSize = true;
+            MovieTime5.BackColor = Color.Transparent;
+            MovieTime5.DisabledLinkColor = Color.FromArgb(30, 106, 167);
+            MovieTime5.Font = new Font("Segoe UI Black", 22F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            MovieTime5.ForeColor = Color.FromArgb(209, 209, 209);
+            MovieTime5.LinkBehavior = LinkBehavior.NeverUnderline;
+            MovieTime5.LinkColor = Color.FromArgb(209, 209, 209);
+            MovieTime5.Location = new Point(781, 420);
+            MovieTime5.Name = "MovieTime5";
+            MovieTime5.Size = new Size(100, 41);
+            MovieTime5.TabIndex = 59;
+            MovieTime5.TabStop = true;
+            MovieTime5.Text = "23:99";
+            MovieTime5.VisitedLinkColor = Color.FromArgb(30, 106, 167);
+            MovieTime5.Click += Session_Click;
             // 
             // MoviePage
             // 
@@ -386,31 +398,31 @@
             BackgroundImage = Properties.Resources.MoviePageBG;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1025, 600);
-            Controls.Add(linkLabel12);
-            Controls.Add(linkLabel11);
-            Controls.Add(linkLabel10);
-            Controls.Add(linkLabel9);
-            Controls.Add(linkLabel8);
-            Controls.Add(linkLabel7);
-            Controls.Add(linkLabel6);
-            Controls.Add(linkLabel5);
-            Controls.Add(linkLabel4);
-            Controls.Add(linkLabel3);
-            Controls.Add(linkLabel2);
-            Controls.Add(linkLabel1);
-            Controls.Add(textBox2);
+            Controls.Add(MovieTime5);
+            Controls.Add(MovieTime4);
+            Controls.Add(MovieTime3);
+            Controls.Add(MovieTime2);
+            Controls.Add(MovieTime1);
+            Controls.Add(MovieDate7);
+            Controls.Add(MovieDate6);
+            Controls.Add(MovieDate5);
+            Controls.Add(MovieDate4);
+            Controls.Add(MovieDate3);
+            Controls.Add(MovieDate2);
+            Controls.Add(MovieDate1);
+            Controls.Add(MovieDuration);
             Controls.Add(BuyTickets_btn);
             Controls.Add(Horarios_Label);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(MovieTitle);
             Controls.Add(BackArrow_btn);
-            Controls.Add(pictureBox1);
+            Controls.Add(MovieCover);
             Controls.Add(label2);
             DoubleBuffered = true;
             Name = "MoviePage";
             RightToLeft = RightToLeft.No;
             Text = "MoviePage";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)MovieCover).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -418,24 +430,24 @@
         #endregion
 
         private Label label2;
-        private PictureBox pictureBox1;
+        private PictureBox MovieCover;
         private Button BackArrow_btn;
-        private TextBox textBox1;
+        private TextBox MovieTitle;
         private Label label1;
         private Label Horarios_Label;
         private Button BuyTickets_btn;
-        private TextBox textBox2;
-        private LinkLabel linkLabel1;
-        private LinkLabel linkLabel2;
-        private LinkLabel linkLabel3;
-        private LinkLabel linkLabel4;
-        private LinkLabel linkLabel5;
-        private LinkLabel linkLabel6;
-        private LinkLabel linkLabel7;
-        private LinkLabel linkLabel8;
-        private LinkLabel linkLabel9;
-        private LinkLabel linkLabel10;
-        private LinkLabel linkLabel11;
-        private LinkLabel linkLabel12;
+        private TextBox MovieDuration;
+        private LinkLabel MovieDate1;
+        private LinkLabel MovieDate2;
+        private LinkLabel MovieDate3;
+        private LinkLabel MovieDate4;
+        private LinkLabel MovieDate5;
+        private LinkLabel MovieDate6;
+        private LinkLabel MovieDate7;
+        private LinkLabel MovieTime1;
+        private LinkLabel MovieTime2;
+        private LinkLabel MovieTime3;
+        private LinkLabel MovieTime4;
+        private LinkLabel MovieTime5;
     }
 }

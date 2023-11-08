@@ -37,6 +37,7 @@
             MovieCover2 = new PictureBox();
             MovieCover4 = new PictureBox();
             MovieCover3 = new PictureBox();
+            LogoutBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)MovieCover1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)MovieCover2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)MovieCover4).BeginInit();
@@ -54,6 +55,7 @@
             LeftArrow_btn.Size = new Size(40, 40);
             LeftArrow_btn.TabIndex = 0;
             LeftArrow_btn.UseVisualStyleBackColor = false;
+            LeftArrow_btn.Click += PageBtn_Click;
             // 
             // RightArrow_btn
             // 
@@ -66,6 +68,7 @@
             RightArrow_btn.Size = new Size(40, 40);
             RightArrow_btn.TabIndex = 1;
             RightArrow_btn.UseVisualStyleBackColor = false;
+            RightArrow_btn.Click += PageBtn_Click;
             // 
             // label1
             // 
@@ -159,13 +162,28 @@
             MovieCover3.TabStop = false;
             MovieCover3.Click += MovieCover_Click;
             // 
+            // LogoutBtn
+            // 
+            LogoutBtn.BackColor = Color.Transparent;
+            LogoutBtn.BackgroundImage = Properties.Resources.LogoutBtnBlack;
+            LogoutBtn.BackgroundImageLayout = ImageLayout.None;
+            LogoutBtn.FlatAppearance.BorderSize = 0;
+            LogoutBtn.FlatStyle = FlatStyle.Flat;
+            LogoutBtn.Location = new Point(6, 19);
+            LogoutBtn.Name = "LogoutBtn";
+            LogoutBtn.Size = new Size(34, 35);
+            LogoutBtn.TabIndex = 13;
+            LogoutBtn.UseVisualStyleBackColor = false;
+            LogoutBtn.Click += LogoutBtn_Click;
+            // 
             // MainPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.MainPageBG;
+            BackgroundImage = Properties.Resources.MainPageBG2;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1025, 600);
+            Controls.Add(LogoutBtn);
             Controls.Add(MovieCover4);
             Controls.Add(MovieCover3);
             Controls.Add(MovieCover2);
@@ -197,5 +215,6 @@
         private PictureBox MovieCover2;
         private PictureBox MovieCover4;
         private PictureBox MovieCover3;
+        private Button LogoutBtn;
     }
 }

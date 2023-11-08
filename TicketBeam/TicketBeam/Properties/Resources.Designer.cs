@@ -103,9 +103,49 @@ namespace TicketBeam.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LogoutBtn {
+            get {
+                object obj = ResourceManager.GetObject("LogoutBtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogoutBtnBlack {
+            get {
+                object obj = ResourceManager.GetObject("LogoutBtnBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MainPageBG {
             get {
                 object obj = ResourceManager.GetObject("MainPageBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MainPageBG1 {
+            get {
+                object obj = ResourceManager.GetObject("MainPageBG1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MainPageBG2 {
+            get {
+                object obj = ResourceManager.GetObject("MainPageBG2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -148,7 +148,7 @@
             Controls.Add(Login_btn);
             DoubleBuffered = true;
             Name = "Login";
-            Text = "Login";
+            Text = " ";
             ResumeLayout(false);
             PerformLayout();
         }
