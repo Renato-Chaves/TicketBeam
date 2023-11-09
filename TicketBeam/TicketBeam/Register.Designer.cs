@@ -132,6 +132,7 @@
             Register_btn.TabIndex = 3;
             Register_btn.Text = "Create Account";
             Register_btn.UseVisualStyleBackColor = false;
+            Register_btn.Click += RegisterBtn_Click;
             // 
             // PasswordConfirmInput
             // 

@@ -29,9 +29,9 @@ namespace TicketBeam
 
         public MainPage()
         {
+            InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             db = MyDBConnection.GetInstance();
-            InitializeComponent();
 
             movieCovers = new PictureBox[4] { MovieCover1, MovieCover2, MovieCover3, MovieCover4 };
             //maxOffset = (int)(db.QuerryToRow(new MySqlCommand("select Count(cd_movie) as maxOffset from movies"))["maxOffset"]);
@@ -52,8 +52,8 @@ namespace TicketBeam
 
         private void MyTickets_btn_Click(object sender, EventArgs e)
         {
-            this.Hide();
             MyTicketsPage.GetInstance().SwitchToPage();
+            this.Hide();
         }
 
         private void MovieCover_Click(object sender, EventArgs e)
@@ -101,7 +101,7 @@ namespace TicketBeam
             DataTable dt = db.QuerryToDataSet(cmd).Tables[0];
             int i = 0;
 
-            while(i < 4)
+            while (i < 4)
             {
                 movieIds[i] = -1;
                 i++;

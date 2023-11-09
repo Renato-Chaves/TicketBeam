@@ -17,7 +17,7 @@ namespace TicketBeam
         private int userCd;
 
         private MyDBConnection() {
-            connectionString = "Server=127.0.0.1; Port=3307; Database=ticketbeamdb; Uid=root; Pwd=usbw;";
+            connectionString = "Server=sql.freedb.tech; Port=3306; Database=freedb_ticketbeamdb; Uid=freedb_ticketroot; Pwd=U2&7sje&avK4kMd;";
             conn = new MySqlConnection(connectionString);
         }
 

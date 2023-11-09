@@ -118,43 +118,46 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="BackArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BackArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="LoginBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LoginBG2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LogoutBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogoutBtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LogoutBtnBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogoutBtnBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MainPageBG1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MainPageBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="RegisterBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RegisterBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MyTicketsPageBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MyTicketsPageBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="MoviePageBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MoviePageBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RightArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RightArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MyTicketsPageBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MyTicketsPageBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MainPageBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MainPageBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LeftArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LeftArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BackArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BackArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MainPageBG2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MainPageBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MainPageBG1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MainPageBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogoutBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoutBtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MainPageBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MainPageBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RightArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RightArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogoutBtnBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoutBtnBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LeftArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LeftArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OccupiedSeat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OccupiedSeat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -20,14 +20,14 @@ namespace TicketBeam
         Form1 ticketForm;
         int movieId;
         string movieSession;
-        string movieDate;
+        String movieDate;
+        String movieDateTxt;
 
         public BuyTickets()
         {
+            InitializeComponent();
             db = MyDBConnection.GetInstance();
             this.StartPosition = FormStartPosition.CenterScreen;
-            InitializeComponent();
-            LoadForm();
         }
 
         public static BuyTickets GetInstance()
@@ -39,9 +39,10 @@ namespace TicketBeam
         public void SwitchToPage()
         {
             this.Show();
-            // LoadMovieInfo();
+            LoadMovieInfo();
             MovieSession.Text = this.movieSession;
             MovieDate.Text = this.movieDate;
+            LoadForm();
         }
 
         public void SetMovieId(int _movieId)
@@ -74,32 +75,48 @@ namespace TicketBeam
 
         private void LoadForm()
         {
-            ticketForm = new Form1() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            if(ticketForm == null) ticketForm = new Form1() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            ticketForm.ClearTickets();
             ticketForm.FormBorderStyle = FormBorderStyle.None;
             TicketPanel.Controls.Add(ticketForm);
             ticketForm.Show();
+            ticketForm.FillTickets(GetMovieId(), GetMovieTime(), GetMovieDate());
+        }
+
+        public String GetMovieDate()
+        {
+            movieDateTxt = DateTime.Now.Year.ToString() + "-" + movieDate[3] + movieDate[4] + "-" + movieDate[0] + movieDate[1];
+            return movieDateTxt;
+        }
+
+        public String GetMovieTime()
+        {
+            return MovieSession.Text;
+        }
+
+        public int GetMovieId()
+        {
+            return movieId;
         }
 
         private void PurchaseTickets(object sender, EventArgs e)
         {
+            String movieDate = GetMovieDate();
+
             List<string> tickets = ticketForm.GetTickets();
 
             foreach (string ticketsItem in tickets)
             {
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO seats VALUES (@movieId, curdate(),@movieTime,@seat,@userId)");
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO seats VALUES (@movieId, @movieDate,@movieTime,@seat,@userId)");
                 cmd.Parameters.AddWithValue("@movieId", movieId);
+                cmd.Parameters.AddWithValue("@movieDate", movieDate);
                 cmd.Parameters.AddWithValue("@movieTime", MovieSession.Text);
                 cmd.Parameters.AddWithValue("@seat", ticketsItem);
-                cmd.Parameters.AddWithValue("@userIds", db.GetUser());
+                cmd.Parameters.AddWithValue("@userId", db.GetUser());
                 db.Querry(cmd);
                 MainPage.GetInstance().SwitchToPage();
                 this.Hide();
             }
-        }
-
-        private void BuyTickets_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

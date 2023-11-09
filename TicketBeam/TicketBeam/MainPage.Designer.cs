@@ -113,7 +113,7 @@
             // MovieCover1
             // 
             MovieCover1.BackColor = SystemColors.ActiveCaptionText;
-            MovieCover1.ImageLocation = "https://www.saltypopcorn.co.uk/film-images/five-nights-at-freddys.jpg";
+            MovieCover1.ImageLocation = "";
             MovieCover1.InitialImage = Properties.Resources.Logo;
             MovieCover1.Location = new Point(117, 238);
             MovieCover1.Name = "MovieCover1";
@@ -126,7 +126,7 @@
             // MovieCover2
             // 
             MovieCover2.BackColor = SystemColors.ActiveCaptionText;
-            MovieCover2.ImageLocation = "https://www.saltypopcorn.co.uk/film-images/five-nights-at-freddys.jpg";
+            MovieCover2.ImageLocation = "";
             MovieCover2.InitialImage = Properties.Resources.Logo;
             MovieCover2.Location = new Point(321, 238);
             MovieCover2.Name = "MovieCover2";
@@ -139,7 +139,7 @@
             // MovieCover4
             // 
             MovieCover4.BackColor = SystemColors.ActiveCaptionText;
-            MovieCover4.ImageLocation = "https://www.saltypopcorn.co.uk/film-images/five-nights-at-freddys.jpg";
+            MovieCover4.ImageLocation = "";
             MovieCover4.InitialImage = Properties.Resources.Logo;
             MovieCover4.Location = new Point(729, 238);
             MovieCover4.Name = "MovieCover4";
@@ -152,7 +152,7 @@
             // MovieCover3
             // 
             MovieCover3.BackColor = SystemColors.ActiveCaptionText;
-            MovieCover3.ImageLocation = "https://www.saltypopcorn.co.uk/film-images/five-nights-at-freddys.jpg";
+            MovieCover3.ImageLocation = "";
             MovieCover3.InitialImage = Properties.Resources.Logo;
             MovieCover3.Location = new Point(525, 238);
             MovieCover3.Name = "MovieCover3";

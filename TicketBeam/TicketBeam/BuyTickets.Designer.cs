@@ -171,7 +171,6 @@
             Controls.Add(label2);
             Name = "BuyTickets";
             Text = "BuyTickets";
-            Load += BuyTickets_Load;
             ResumeLayout(false);
             PerformLayout();
         }

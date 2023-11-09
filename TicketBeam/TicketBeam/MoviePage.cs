@@ -27,9 +27,9 @@ namespace TicketBeam
 
         public MoviePage()
         {
+            InitializeComponent();
             db = MyDBConnection.GetInstance();
             this.StartPosition = FormStartPosition.CenterScreen;
-            InitializeComponent();
             movieDates = new LinkLabel[7] { MovieDate1, MovieDate2, MovieDate3, MovieDate4, MovieDate5, MovieDate6, MovieDate7 };
             movieTimes = new LinkLabel[5] { MovieTime1, MovieTime2, MovieTime3, MovieTime4, MovieTime5 };
         }
@@ -43,9 +43,9 @@ namespace TicketBeam
         public void SwitchToPage()
         {
             this.Show();
-            LoadMovieInfo();
-            //LoadDates();
             LoadSessions();
+            LoadMovieInfo();
+            LoadDates();
         }
 
         public void SetMovie(int _movieId)
@@ -79,17 +79,17 @@ namespace TicketBeam
 
 
         }
-        
-        /*private void LoadDates()
+
+        private void LoadDates()
         {
             //MySqlCommand cmd = new MySqlCommand("SELECT date_start, date_end, DATE(ADDDATE(curdate(), INTERVAL @i:=@i+.5 DAY)) AS date FROM sessions HAVING  @i < DATEDIFF(date_end, date_start) and date >= date_start and date <= date_end Limit 7");
-            MySqlCommand cmd = new MySqlCommand("SELECT * from session where id_movie = @movieId limit 1");
-            cmd.Parameters.AddWithValue("@movieCd", movieId);
-            DataRow dta = db.QuerryToRow(cmd);
+            MySqlCommand cmd = new MySqlCommand("SELECT * from sessions where id_movie = @movieId limit 1");
+            cmd.Parameters.AddWithValue("@movieId", movieId);
+            DataTable dt = db.QuerryToDataSet(cmd).Tables[0];
 
 
-            DateTime StartDate = Convert.ToDateTime(dta["date_start"].ToString());
-            DateTime EndDate = Convert.ToDateTime(dta["date_end"].ToString());
+            DateTime StartDate = Convert.ToDateTime(dt.Rows[0]["date_start"].ToString());
+            DateTime EndDate = Convert.ToDateTime(dt.Rows[0]["date_end"].ToString());
             int DayInterval = 1;
 
             List<DateTime> dateList = new List<DateTime>();
@@ -98,7 +98,7 @@ namespace TicketBeam
             {
                 StartDate = StartDate.AddDays(DayInterval);
                 dateList.Add(StartDate);
-                MessageBox.Show(StartDate.ToString());
+                //MessageBox.Show(StartDate.ToString());
                 j--;
             }
 
@@ -111,17 +111,16 @@ namespace TicketBeam
                 movieDates[i].LinkBehavior = LinkBehavior.NeverUnderline;
                 i++;
             }
+            i = 0;
+            foreach (DateTime date in dateList)
+            {
+                movieDates[i].Text = date.ToString().Substring(0, 5);
+
+                i++;
+            }
             selectedDay = 0;
             SelectDate();
-            i = 0;
-            //foreach (DataRow row in dta.Rows)
-            //{
-
-            //    movieDates[i].Text = row["date"].ToString();
-
-            //    i++;
-            //}
-        }*/
+        }
 
         private void LoadSessions()
         {
@@ -140,10 +139,6 @@ namespace TicketBeam
                 movieDates[i].LinkBehavior = LinkBehavior.NeverUnderline;
                 i++;
             }
-            selectedSession = 0;
-            selectedDay = 0;
-            SelectDate();
-            SelectSession();
 
             i = 0;
             foreach (DataRow row in dt.Rows)
@@ -154,6 +149,8 @@ namespace TicketBeam
                 i++;
             }
 
+            selectedSession = 0;
+            SelectSession();
 
         }
 
@@ -221,7 +218,8 @@ namespace TicketBeam
             }
         }
 
-        private string GetSelectedDate() {            
+        private string GetSelectedDate()
+        {
             return movieDates[selectedDay].Text.ToString();
         }
 

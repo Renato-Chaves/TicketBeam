@@ -84,7 +84,7 @@ namespace TicketBeam
 
         private void LoadTickets(int _offset)
         {
-            MySqlCommand cmd = new MySqlCommand("Select * from seats where id_user = @userId Limit 5 Offset @Offset");
+            MySqlCommand cmd = new MySqlCommand("Select * from seats where id_user = @userId having date_marked >= curdate() order by date_marked Asc Limit 5 Offset @Offset");
             cmd.Parameters.AddWithValue("@Offset", offset);
             cmd.Parameters.AddWithValue("@userId", db.GetUser());
             DataTable dt = db.QuerryToDataSet(cmd).Tables[0];

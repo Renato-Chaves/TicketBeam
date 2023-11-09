@@ -173,6 +173,16 @@ namespace TicketBeam.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap OccupiedSeat {
+            get {
+                object obj = ResourceManager.GetObject("OccupiedSeat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RegisterBG {
             get {
                 object obj = ResourceManager.GetObject("RegisterBG", resourceCulture);
